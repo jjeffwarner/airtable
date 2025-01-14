@@ -1,0 +1,23 @@
+# Airtable configuration
+# AIRTABLE_API_URL = 'https://api.airtable.com/v0/YOUR_BASE_ID/YOUR_TABLE_NAME'
+# PERSONAL_ACCESS_TOKEN = 'YOUR_PERSONAL_ACCESS_TOKEN'
+AIRTABLE_API_URL: "https://api.airtable.com/v0/appaVQinQSvJbrwFe/Tasks"
+
+PERSONAL_ACCESS_TOKEN: "pat6Q3rgLegI8vgo5.efc7897ea0a24420d80126251eab4ed57c3e3710a8a45f0fd51ae68190befd81"
+
+# Airtable API rate limit: 5 requests per second
+MAX_REQUESTS_PER_SECOND: 5
+
+class Object
+  # Function to insert or update a record in Airtable
+  def upsert_airtable_record: (untyped record_id, untyped fields) -> untyped
+
+  # Function to process records and enforce rate limiting
+  def process_records: (untyped records) -> untyped
+
+  # Function to fetch records from Airtable with pagination
+  def fetch_airtable_records: () -> untyped
+
+  # Function to read CSV and prepare records for insertion/update
+  def read_csv: (untyped file_path) -> untyped
+end

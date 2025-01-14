@@ -1,0 +1,3 @@
+class EpicTable
+  def process_fields: -> untyped
+end
