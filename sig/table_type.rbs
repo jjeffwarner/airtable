@@ -1,7 +1,0 @@
-class TableType
-  @api_url: untyped
-
-  @fields: untyped
-
-  def process_fields: -> untyped
-end
